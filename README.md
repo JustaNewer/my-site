@@ -5,7 +5,7 @@ A single-file, zero-dependency personal website with a strict black-and-white in
 ## Sections
 
 - Home: avatar, public profile information, personal tags, and motto
-- Resume: language, internship, project, and skill highlights
+- My Projects: reserved for future GitHub project showcases
 - Articles: reserved for future writing
 - Solo Trip: Singapore, Osaka, Kyoto, Mount Fuji, and Tokyo photo journals
 

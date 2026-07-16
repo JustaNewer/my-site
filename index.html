@@ -222,44 +222,7 @@
     font-weight: 700;
   }
 
-  /* Resume */
-  .resume-section {
-    display: grid;
-    grid-template-columns: 170px minmax(0, 1fr);
-    border-top: 1px solid var(--fg);
-  }
-
-  .resume-heading, .resume-content { padding: 22px 0; }
-
-  .resume-heading {
-    padding-right: 20px;
-    font-size: 14px;
-    text-transform: uppercase;
-  }
-
-  .resume-content { border-left: 1px solid var(--fg); padding-left: 24px; }
-
-  .resume-item + .resume-item {
-    margin-top: 28px;
-    padding-top: 28px;
-    border-top: 1px dashed var(--fg);
-  }
-
-  .resume-meta {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 9px;
-    font-size: 12px;
-  }
-
-  .resume-item h3 { margin-bottom: 8px; font-size: 18px; line-height: 1.35; }
-  .resume-item ul { padding-left: 19px; }
-  .resume-item li + li { margin-top: 6px; }
-  .skill-line + .skill-line { margin-top: 12px; }
-  .skill-line strong { display: inline-block; min-width: 118px; }
-
-  /* Empty articles */
+  /* Empty sections */
   .empty-state {
     min-height: 55vh;
     display: grid;
@@ -316,10 +279,6 @@
     .toolbar { align-self: flex-end; }
     .profile { margin-top: 0; }
     .profile-grid { grid-template-columns: 1fr; }
-    .resume-section { grid-template-columns: 1fr; }
-    .resume-heading { padding-bottom: 8px; }
-    .resume-content { border-left: 0; padding: 0 0 24px; }
-    .resume-meta { flex-direction: column; gap: 2px; }
     .photo-grid { grid-template-columns: 1fr; gap: 12px; }
     .photo-grid figure { aspect-ratio: 4 / 3; }
   }
@@ -339,7 +298,7 @@
 <header class="topbar">
   <nav class="nav-links" aria-label="Site sections">
     <a class="nav-link" href="#home" data-view="home" data-en="Home" data-zh="主页">Home</a>
-    <a class="nav-link" href="#resume" data-view="resume" data-en="Resume" data-zh="个人简历">Resume</a>
+    <a class="nav-link" href="#projects" data-view="projects" data-en="My Projects" data-zh="我的项目">My Projects</a>
     <a class="nav-link" href="#articles" data-view="articles" data-en="Articles" data-zh="文章">Articles</a>
     <a class="nav-link" href="#travel" data-view="travel" data-en="Solo Trip" data-zh="个人旅行">Solo Trip</a>
   </nav>
@@ -382,75 +341,10 @@
     </div>
   </section>
 
-  <section class="view" id="resume" aria-labelledby="resume-title" hidden>
-    <h1 class="page-title" id="resume-title" data-en="Resume" data-zh="个人简历">Resume</h1>
-
-    <div class="resume-section">
-      <h2 class="resume-heading" data-en="Language" data-zh="语言能力">Language</h2>
-      <div class="resume-content">
-        <div class="resume-item">
-          <h3 data-en="English" data-zh="英语">English</h3>
-          <p data-en="IELTS 7.0 (Listening 7.5, Reading 7.5, Writing 6.5, Speaking 6.5); CET-6. Fluent in everyday conversation and able to read English industry materials and white papers." data-zh="雅思总分 7.0（听力 7.5、阅读 7.5、写作 6.5、口语 6.5）；CET-6。日常英语沟通流利，可顺畅阅读英文行业资料与白皮书。">IELTS 7.0 (Listening 7.5, Reading 7.5, Writing 6.5, Speaking 6.5); CET-6. Fluent in everyday conversation and able to read English industry materials and white papers.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="resume-section">
-      <h2 class="resume-heading" data-en="Experience" data-zh="实习经历">Experience</h2>
-      <div class="resume-content">
-        <article class="resume-item">
-          <div class="resume-meta"><time>2025.05 - 2025.10</time><span data-en="Beijing" data-zh="北京">Beijing</span></div>
-          <h3 data-en="Zhipu AI / Software Development Assistant Intern" data-zh="北京智谱华章科技股份有限公司 / 软件开发助理实习生">Zhipu AI / Software Development Assistant Intern</h3>
-          <ul>
-            <li data-en="Built an automated data-recognition system on the internal platform to classify model outputs and training data as good cases or bad cases according to rule documents." data-zh="基于公司内部平台开发自动化数据识别系统，按照规则文档将大模型输出与训练数据标记为 goodcase 或 badcase。">Built an automated data-recognition system on the internal platform to classify model outputs and training data as good cases or bad cases according to rule documents.</li>
-            <li data-en="Created a bad-case identification and grading framework using historical data and semantic analysis, producing structured reports for product iteration and data governance." data-zh="利用历史数据与大模型语义分析能力建立 Badcase 识别及分级体系，输出结构化分析报告，支持产品迭代与数据治理。">Created a bad-case identification and grading framework using historical data and semantic analysis, producing structured reports for product iteration and data governance.</li>
-            <li data-en="Reduced the algorithm team's workload by approximately 63%." data-zh="系统上线后为算法团队节省约 63% 的工作时间。">Reduced the algorithm team's workload by approximately 63%.</li>
-          </ul>
-        </article>
-
-        <article class="resume-item">
-          <div class="resume-meta"><time>2026.02 - 2026.04</time><span data-en="Shenzhen" data-zh="深圳">Shenzhen</span></div>
-          <h3 data-en="Rongda Technology / Project Assistant Intern" data-zh="北京荣大科技股份有限公司 / 项目助理实习生">Rongda Technology / Project Assistant Intern</h3>
-          <ul>
-            <li data-en="Supported end-to-end coordination of Hong Kong English-language projects, tracked key tasks, and communicated progress and blockers to keep delivery on schedule." data-zh="协助香港英文项目的全流程协调与调度，跟进关键任务状态并同步进度与阻塞点，保障各环节按期推进。">Supported end-to-end coordination of Hong Kong English-language projects, tracked key tasks, and communicated progress and blockers to keep delivery on schedule.</li>
-            <li data-en="Responded to urgent requirement changes, helped revise schedules, and supported delivery against client timing and quality expectations." data-zh="协助处理突发需求变更与应急事项，配合调整排期，保障交付符合客户的时间与质量要求。">Responded to urgent requirement changes, helped revise schedules, and supported delivery against client timing and quality expectations.</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-
-    <div class="resume-section">
-      <h2 class="resume-heading" data-en="Projects" data-zh="项目经历">Projects</h2>
-      <div class="resume-content">
-        <article class="resume-item">
-          <div class="resume-meta"><time>2025.02 - 2026.05</time><span data-en="Full-stack Developer" data-zh="全栈开发工程师">Full-stack Developer</span></div>
-          <h3 data-en="LLM-based Intelligent Roommate Allocation System" data-zh="基于 LLM 的智能舍友分配系统">LLM-based Intelligent Roommate Allocation System</h3>
-          <ul>
-            <li data-en="Led the full product lifecycle from user research and requirements analysis to solution design, development, and delivery." data-zh="从 0 到 1 主导用户调研、需求分析、方案设计、开发与落地全流程。">Led the full product lifecycle from user research and requirements analysis to solution design, development, and delivery.</li>
-            <li data-en="Converted questionnaire responses into user vectors, improving matching accuracy by more than 30%." data-zh="通过问卷分析性格及生活习惯并生成用户向量，使匹配准确率提升 30% 以上。">Converted questionnaire responses into user vectors, improving matching accuracy by more than 30%.</li>
-            <li data-en="Designed a three-stage allocation algorithm combining greedy clustering by schedule, personality optimization, and LLM-generated dormitory reports." data-zh="设计三层分配算法：按作息贪心聚类、按性格进一步优化，并由大模型生成宿舍分析报告。">Designed a three-stage allocation algorithm combining greedy clustering by schedule, personality optimization, and LLM-generated dormitory reports.</li>
-          </ul>
-        </article>
-
-        <article class="resume-item">
-          <div class="resume-meta"><time>2025.05 - 2025.06</time><span data-en="Low-code Developer" data-zh="低代码开发工程师">Low-code Developer</span></div>
-          <h3 data-en="Machine-learning Spanish Toxic Comment Detection" data-zh="基于机器学习的西班牙语毒评检测">Machine-learning Spanish Toxic Comment Detection</h3>
-          <ul>
-            <li data-en="Built a multi-label toxic-comment classifier with Spanish BERT (BETO), covering data cleaning, tokenization, and model training." data-zh="基于西班牙语 BERT（BETO）构建多标签毒评检测模型，完成数据清洗、分词和模型训练。">Built a multi-label toxic-comment classifier with Spanish BERT (BETO), covering data cleaning, tokenization, and model training.</li>
-            <li data-en="Used data augmentation, pseudo-label semi-supervised learning, parameter freezing, cross-validation, and tuning to address limited data and CPU constraints." data-zh="采用数据增强、伪标签半监督学习、参数冻结、交叉验证与调参，解决样本不足和 CPU 训练耗时问题。">Used data augmentation, pseudo-label semi-supervised learning, parameter freezing, cross-validation, and tuning to address limited data and CPU constraints.</li>
-            <li data-en="Achieved 81% model accuracy." data-zh="最终模型准确率达到 81%。">Achieved 81% model accuracy.</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-
-    <div class="resume-section">
-      <h2 class="resume-heading" data-en="Skills" data-zh="技能">Skills</h2>
-      <div class="resume-content">
-        <p class="skill-line"><strong>AI / Agent</strong><span data-en="LLMs, agent development, API integration, data processing and workflow automation" data-zh="主流大模型、Agent 开发、API 调用、数据处理与流程自动化">LLMs, agent development, API integration, data processing and workflow automation</span></p>
-        <p class="skill-line"><strong data-en="Development" data-zh="开发基础">Development</strong><span data-en="Basic Linux commands, SQL, Cursor and Claude Code" data-zh="Linux 基础命令、SQL、Cursor、Claude Code">Basic Linux commands, SQL, Cursor and Claude Code</span></p>
-        <p class="skill-line"><strong>Office</strong><span data-en="Word, Excel and PowerPoint" data-zh="Word、Excel、PowerPoint">Word, Excel and PowerPoint</span></p>
-      </div>
+  <section class="view" id="projects" aria-labelledby="projects-title" hidden>
+    <h1 class="page-title" id="projects-title" data-en="My Projects" data-zh="我的项目">My Projects</h1>
+    <div class="empty-state">
+      <p data-en="NO PROJECTS YET" data-zh="项目内容暂时为空">NO PROJECTS YET</p>
     </div>
   </section>
 
