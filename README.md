@@ -4,7 +4,7 @@ A single-file, zero-dependency personal website with a strict black-and-white in
 
 ## Sections
 
-- Home: avatar, public profile information, personal tags, and motto
+- Home: avatar, public profile information, and platform links
 - My Projects: reserved for future GitHub project showcases
 - Articles: reserved for future writing
 - Solo Trip: Singapore, Osaka, Kyoto, Mount Fuji, and Tokyo photo journals
@@ -20,3 +20,5 @@ A single-file, zero-dependency personal website with a strict black-and-white in
 Open `index.html` directly, or serve the folder with any static web server.
 
 For step-by-step publishing instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
+
+Brand SVGs are sourced from [Simple Icons](https://simpleicons.org/); trademarks belong to their respective owners.
