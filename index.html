@@ -276,11 +276,63 @@
     font-size: 12px;
   }
 
+  .article-preview {
+    padding: 20px;
+  }
+
+  .article-preview p {
+    max-width: 760px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .article-read-link,
+  .article-back-link {
+    min-width: 122px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid var(--fg);
+    background: var(--bg);
+    color: var(--fg);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .article-read-link:hover,
+  .article-read-link:focus-visible,
+  .article-back-link:hover,
+  .article-back-link:focus-visible {
+    box-shadow: inset 0 0 0 1px var(--fg);
+    outline: none;
+  }
+
+  .article-back-link {
+    display: none;
+    width: max-content;
+    margin: 18px 20px 0;
+  }
+
   .article-content {
+    display: none;
     padding: 24px 26px 30px;
     font-size: 14px;
     line-height: 1.75;
   }
+
+  body.article-reader #articles > .page-title,
+  body.article-reader #articles .article-list > .article-entry:not(:first-child),
+  body.article-reader .article-preview {
+    display: none;
+  }
+
+  body.article-reader .article-list { gap: 0; }
+  body.article-reader .article-back-link { display: inline-flex; }
+  body.article-reader .article-content { display: block; }
 
   .article-content h3 {
     margin: 30px 0 12px;
@@ -499,6 +551,8 @@
       gap: 6px;
       padding: 14px;
     }
+    .article-preview { padding: 16px 14px 18px; }
+    .article-back-link { margin: 14px 14px 0; }
     .article-content { padding: 18px 14px 22px; }
     .article-content h3 { font-size: 18px; }
     .project-entry { grid-template-columns: 1fr; }
@@ -673,10 +727,15 @@
     <h1 class="page-title" id="articles-title" data-en="Articles" data-zh="文章">Articles</h1>
     <div class="article-list">
       <article class="article-entry">
+        <a class="article-back-link" href="./#articles" data-en="Back to articles" data-zh="返回文章列表">Back to articles</a>
         <header class="article-header">
           <h2>平民雅思备考指南：0 成本学雅思教程</h2>
           <time datetime="2026-07-17">2026.07.17</time>
         </header>
+        <div class="article-preview">
+          <p>从零成本备考到首考雅思 7.0：这篇文章整理了词汇、语法、听说读写、免费工具与考前时间规划，给出一套可以直接执行的自学路线。</p>
+          <a class="article-read-link" href="?article=ielts-guide#articles" data-en="Read full article" data-zh="阅读全文">Read full article</a>
+        </div>
         <div class="article-content">
           <blockquote>
             <p>我自学雅思首考7.0，总花费0元。本文保留了我的备考经验、资源推荐和分数参考。相关观点并非官方标准，网站可用性与题库时效性也未作额外核验。</p>
@@ -913,6 +972,10 @@
   var translatedNodes = document.querySelectorAll('[data-en][data-zh]');
   var lang = 'en';
   var theme = 'light';
+
+  if (new URLSearchParams(window.location.search).get('article') === 'ielts-guide') {
+    document.body.classList.add('article-reader');
+  }
 
   try {
     lang = localStorage.getItem('jye-lang') || 'en';
