@@ -246,6 +246,97 @@
     font-size: 14px;
   }
 
+  /* Articles */
+  .article-list {
+    display: grid;
+    gap: 38px;
+  }
+
+  .article-entry { border: 2px solid var(--fg); }
+
+  .article-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--fg);
+  }
+
+  .article-title-only .article-header { border-bottom: 0; }
+
+  .article-header h2 {
+    font-size: clamp(20px, 4vw, 30px);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .article-header time {
+    flex-shrink: 0;
+    font-size: 12px;
+  }
+
+  .article-content {
+    padding: 24px 26px 30px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .article-content h3 {
+    margin: 30px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--fg);
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  .article-content h4 {
+    margin: 22px 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .article-content p { margin-bottom: 14px; }
+
+  .article-content blockquote {
+    margin-bottom: 24px;
+    padding: 12px 16px;
+    border-left: 4px solid var(--fg);
+    font-weight: 700;
+  }
+
+  .article-content ul,
+  .article-content ol {
+    margin: 0 0 18px;
+    padding-left: 28px;
+  }
+
+  .article-content li + li { margin-top: 6px; }
+
+  .article-table-wrap {
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow-x: auto;
+  }
+
+  .article-content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  .article-content th,
+  .article-content td {
+    padding: 9px 10px;
+    border: 1px solid var(--fg);
+    text-align: left;
+  }
+
+  .article-content a {
+    font-weight: 700;
+    text-underline-offset: 3px;
+  }
+
   /* Projects */
   .project-list {
     display: grid;
@@ -402,6 +493,14 @@
     .toolbar { align-self: flex-end; }
     .profile { margin-top: 0; }
     .profile-grid { grid-template-columns: 1fr; }
+    .article-header {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 6px;
+      padding: 14px;
+    }
+    .article-content { padding: 18px 14px 22px; }
+    .article-content h3 { font-size: 18px; }
     .project-entry { grid-template-columns: 1fr; }
     .project-index {
       padding: 10px 14px;
@@ -572,8 +671,183 @@
 
   <section class="view" id="articles" aria-labelledby="articles-title" hidden>
     <h1 class="page-title" id="articles-title" data-en="Articles" data-zh="文章">Articles</h1>
-    <div class="empty-state">
-      <p data-en="NO ENTRIES YET" data-zh="暂时没有内容">NO ENTRIES YET</p>
+    <div class="article-list">
+      <article class="article-entry">
+        <header class="article-header">
+          <h2>平民雅思备考指南：0 成本学雅思教程</h2>
+          <time datetime="2026-07-17">2026.07.17</time>
+        </header>
+        <div class="article-content">
+          <blockquote>
+            <p>我自学雅思首考7.0，总花费0元。本文保留了我的备考经验、资源推荐和分数参考。相关观点并非官方标准，网站可用性与题库时效性也未作额外核验。</p>
+          </blockquote>
+
+          <h3>备考工具</h3>
+          <p>机考模拟网站：ieltscat.xdf.cn<br />写作批改网站：essay.art（免费）、ielts9.me（付费）<br />官方题以外的练习：虾滑听力、ZYZ阅读；虽然有小概率遇到原题，但是建议官方做完再做这些。<br />虾滑和ZYZ是机经，通过参加考试的考生总结出来的考场原题，有几率遇到。剑雅官方是每年出的官方题目，不会遇到原题。</p>
+
+          <h3>一、备考路线总览</h3>
+          <ol>
+            <li><strong>打基础</strong>：词汇 + 语法。</li>
+            <li><strong>熟悉机考与备考资料</strong>：选择模拟网站和剑桥雅思真题。</li>
+            <li><strong>分项练习</strong>：听力、阅读、写作、口语。</li>
+            <li><strong>考前冲刺</strong>：严格限时、复盘错因、过口语题库。</li>
+          </ol>
+          <p>基础阶段非常重要。基础打牢后再进入正式备考，效率会更高。建议根据个人水平安排 <strong>2～6 个月</strong>的基础期。<br /><strong>雅思的核心是同义词替换</strong></p>
+
+          <h3>二、基础阶段</h3>
+          <h4>1. 词汇</h4>
+          <p>词汇量最低标准参考如下：</p>
+          <div class="article-table-wrap">
+            <table>
+              <thead><tr><th>目标分数</th><th>参考词汇量</th></tr></thead>
+              <tbody>
+                <tr><td>6.0</td><td>7,000+</td></tr>
+                <tr><td>6.5</td><td>7,500+</td></tr>
+                <tr><td>7.0</td><td>8,000+</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>学习建议：</p>
+          <ul>
+            <li>每天背多少单词应量力而行。我每天复习约 300 个单词，最终词汇量达到 9,000+。</li>
+            <li>单词 App 选择主流产品即可，例如扇贝单词、不背单词等。</li>
+            <li>可使用“每日英语听力”测词汇量。</li>
+            <li>建议每天坚持打卡，直到考试前一周。</li>
+          </ul>
+          <h4>2. 语法</h4>
+          <p>建议按以下顺序建立语法体系：</p>
+          <ol>
+            <li>学会五种简单句。</li>
+            <li>学习连词，把简单句连接成长句。</li>
+            <li>学习从句。</li>
+            <li>再了解虚拟语气等相对次要的语法点。</li>
+          </ol>
+          <p>语法学习的主要目的不是死记规则，而是训练自己快速抓住长难句主干的能力。</p>
+          <p>检验方法：让 AI 生成长句，自己标记句子主干，再让 AI 检查和批改。</p>
+          <p>免费课程推荐：B 站 UP 主“Larry 想做技术大佬”的课程《半个月搭建你的语法体系》。</p>
+
+          <h3>三、机考练习工具</h3>
+          <h4>新东方雅思机考网站</h4>
+          <ul>
+            <li>网址：<a href="https://ieltscat.xdf.cn/" target="_blank" rel="noopener noreferrer">ieltscat.xdf.cn</a></li>
+            <li>用途：练习听力、阅读和写作模拟考试。</li>
+            <li>适合用于熟悉机考界面及完整考试流程。</li>
+          </ul>
+
+          <h3>四、听力备考</h3>
+          <h4>日常训练</h4>
+          <ul>
+            <li>在听力 App 中选择难度合适的材料，推荐 <strong>CNN 10</strong>。</li>
+            <li>完成剑桥雅思听力题后进行精听：听一句，写一句。我没试过这个方法，但听说别人都是这么做的。</li>
+            <li>通过大量练习建立快速的语法反应。听不懂不一定只是因为语速快，也可能是没有及时理解句意。</li>
+          </ul>
+          <h4>能力差异</h4>
+          <ul>
+            <li>听力 6 分：更多依赖抓关键词。</li>
+            <li>听力 7 分：能够理解整段内容的语义。</li>
+          </ul>
+          <h4>真题使用建议</h4>
+          <ul>
+            <li>建议从《剑桥雅思 10》及之后的真题开始练习。</li>
+            <li>较早的《剑桥雅思 4～7》可作为辅助练习；部分题目质量与当前考试存在差异，做得不好不必过度在意。</li>
+          </ul>
+
+          <h3>五、阅读备考</h3>
+          <h4>真题使用建议</h4>
+          <ul>
+            <li>同样建议从《剑桥雅思 10》及之后的真题开始。</li>
+            <li>如果时间充裕，也可以练习更早的题目。</li>
+          </ul>
+          <h4>阅读错题的三个主要原因</h4>
+          <ol>
+            <li><strong>题目理解错误</strong>：漏看词，或因语法不扎实而误解题意。</li>
+            <li><strong>文章理解错误</strong>：段落信息没有看全，或虽然定位到答案句，却没有理解句意。</li>
+            <li><strong>词汇不足</strong>：没有识别出题目与原文之间的同义替换。</li>
+          </ol>
+
+          <h3>六、听力与阅读的共同策略</h3>
+          <ul>
+            <li>先打牢词汇语法基础，再学习做题技巧。</li>
+            <li>网课推荐：B 站 UP 主“天狗吃月亮”，重点学习划关键词和识别同义替换。</li>
+            <li>阅读训练初期可以不限时。如果不限时状态下正确率较高，通常说明基础问题不大。</li>
+            <li>考前两个月必须开始严格按照正式考试时间做题。</li>
+            <li>是否从一开始就限时应结合个人情况决定。</li>
+            <li>“虾滑听力”和“ZYZ 阅读”可在做完剑桥雅思真题后再考虑；剑桥雅思已经足以应对真实考试。</li>
+          </ul>
+
+          <h3>七、写作备考</h3>
+          <h4>学习方法</h4>
+          <ul>
+            <li>在 B 站搜索 <strong>Simon</strong>，学习他的四段式写作结构，以及大作文、小作文的各类题型。</li>
+            <li>网络上对 Simon 的写作体系存在不同评价，至少我使用其模板后取得了写作 6.5 分，对大部分考生已经够用。</li>
+          </ul>
+          <h4>作文批改工具</h4>
+          <ul>
+            <li>网址：<a href="https://essay.art/" target="_blank" rel="noopener noreferrer">essay.art</a></li>
+            <li>完全免费。</li>
+            <li>我在该网站上的作文评分通常为 6.0，实际考试写作成绩为 6.5。</li>
+            <li>网址：<a href="https://ielts9.me/" target="_blank" rel="noopener noreferrer">ielts9.me</a></li>
+            <li>第一篇免费，后续需要付费。</li>
+            <li>其评分相对更准确。</li>
+          </ul>
+
+          <h3>八、口语备考</h3>
+          <ul>
+            <li>完成基础语法和词汇学习后，可以在线上平台找外国人聊天，训练真实交流能力。</li>
+            <li>如果刚开始容易紧张，可以让 AI 准备话题，然后对着手机录屏练习表达。</li>
+            <li>考前一个月开始过口语题库，我用的是“雅思哥”。</li>
+            <li>千万不要背诵别人的答案。尽量结合自己的真实经历回答问题。</li>
+            <li>口语分为三个部分，part1是日常对话、part2是围绕一个话题展开2分钟的描述，有一分钟做笔记时间、part3是深入挖掘其它话题。个人认为<strong>part2最重要</strong>，至少要说满1分钟40秒，最好说满2分钟。</li>
+            <li>可以把口语问题收集之后发给 AI，让它根据你的个人经历提供相关语料和表达方式。AI会根据你的历史对话记录给你推荐适合自己的part2语料，因为有时候你自己都不记得发生过什么和题目相符的故事。</li>
+            <li>如果条件允许，尽量避开换题季参加口语考试。换题季大致为每年 <strong>1 月、5 月和 9 月</strong>。</li>
+          </ul>
+
+          <h3>九、备考时间节点</h3>
+          <div class="article-table-wrap">
+            <table>
+              <thead><tr><th>时间阶段</th><th>建议任务</th></tr></thead>
+              <tbody>
+                <tr><td>基础期（约 2～6 个月）</td><td>建立词汇和语法体系，训练长难句理解能力</td></tr>
+                <tr><td>日常持续</td><td>背单词、精听、阅读复盘、口语输出</td></tr>
+                <tr><td>考前两个月</td><td>阅读与听力开始严格限时训练</td></tr>
+                <tr><td>考前一个月</td><td>集中过口语题库，用自己的经历组织答案</td></tr>
+                <tr><td>考前一周</td><td>可停止每日单词打卡，把精力转向状态调整和综合复习</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>十、核心原则</h3>
+          <ol>
+            <li><strong>基础优先</strong>：词汇和语法不牢，技巧很难稳定发挥作用。</li>
+            <li><strong>重视执行力</strong>：完成第一套雅思试卷、说出第一句英语，就已经迈出了关键一步。</li>
+            <li><strong>用真题建立能力</strong>：优先完成剑桥雅思真题，再考虑额外训练资料。</li>
+            <li><strong>复盘具体错因</strong>：区分是词汇、语法、理解、定位还是时间管理问题。</li>
+            <li><strong>坚持真实表达</strong>：尤其是口语，不背模板化答案，围绕自己的经历组织内容。</li>
+          </ol>
+          <p>备考雅思最重要的是执行力。开始行动，并持续完成每天的学习任务，往往比不断寻找新的资料和技巧更有效。</p>
+        </div>
+      </article>
+
+      <article class="article-entry article-title-only">
+        <header class="article-header">
+          <h2>什么是比特币？</h2>
+          <time datetime="2026-07-16">2026.07.16</time>
+        </header>
+      </article>
+
+      <article class="article-entry article-title-only">
+        <header class="article-header">
+          <h2>雅思首考7.0记录</h2>
+          <time datetime="2026-07-16">2026.07.16</time>
+        </header>
+      </article>
+
+      <article class="article-entry article-title-only">
+        <header class="article-header">
+          <h2>投资心理学</h2>
+          <time datetime="2026-07-16">2026.07.16</time>
+        </header>
+      </article>
     </div>
   </section>
 

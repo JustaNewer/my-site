@@ -6,7 +6,7 @@ A single-file, zero-dependency personal website with a strict black-and-white in
 
 - Home: avatar, public profile information, and platform links
 - My Projects: bilingual showcases for AItour and RoommateDistributor
-- Articles: reserved for future writing
+- Articles: Markdown essays displayed by source-file modification date
 - Solo Trip: Singapore, Osaka, Kyoto, Mount Fuji, and Tokyo photo journals
 
 ## Features
